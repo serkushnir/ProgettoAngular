@@ -1,0 +1,33 @@
+<table class="mt-10 text-center shadow-lg mb-20 table-auto w-full">
+    <thead>
+        <tr>
+            <th class="font-medium">
+                <select [(ngModel)]="mese" (click)="cambiaDatiTabella()">
+                    <option *ngFor="let data of mesi">{{data}}</option>
+                </select>
+            </th>
+            <th class="font-medium">Regione</th>
+            <th class="font-medium">Casi Totali</th>
+            <th class="font-medium">Casi attuali</th>
+            <th class="font-medium">Decessi</th>
+            <th class="font-medium">Terapia Intensiva</th>
+            <th class="font-medium">Isolamenti Domiciliari</th>
+            <th class="font-medium">Dimessi Guariti</th>
+            <th class="font-medium">Tamponi Totali</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let regione of dati; let i=index" class="border-b border-blue-300 rounded-2xl">
+            <td><img [src]="'./assets/'+i+'.png'" class="w-3/5 sm:h-auto md:h-16 justify-center mx-auto"></td>
+            <td><a href="https://www.regione.{{nomeRegioniLink[i]}}.it"
+                    class="hover:underline">{{regione.denominazione_regione}}</a></td>
+            <td>{{regione.totale_casi}}</td>
+            <td>{{regione.totale_positivi}}</td>
+            <td>{{regione.deceduti}}</td>
+            <td>{{regione.terapia_intensiva}}</td>
+            <td>{{regione.isolamento_domiciliare}}</td>
+            <td>{{regione.dimessi_guariti}}</td>
+            <td>{{regione.tamponi}}</td>
+        </tr>
+    </tbody>
+</table>

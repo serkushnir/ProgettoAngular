@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "progetto-angular-2751f": {
+      "hosting": {
+        "ProgettoAngular": [
+          "progetto-angular-2751f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "progetto-angular-2751f"
+  }
+}

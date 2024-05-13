@@ -1,0 +1,8 @@
+#region {
+    stroke: #fff;
+    stroke-width: 2;
+    cursor: pointer;
+}
+#region:hover {
+    fill: #aaa;
+}

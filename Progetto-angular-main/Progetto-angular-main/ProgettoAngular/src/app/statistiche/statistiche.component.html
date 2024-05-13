@@ -1,0 +1,50 @@
+<div class="container mx-auto mt-10">
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="flex justify-center md:border-r-2 md:border-gray-600 text-center rounded-l p-6 sm:border-0">
+      <div>
+        <div class="font-serif">
+          <h2 class="text-xl">Nuovi Positivi</h2>
+          <h3 class="text-6xl font-bold">{{nuoviCasi}}</h3>
+          <p class="text-xl font-bold mt-4">Variazione Totale Positivi: {{variazioneTotalePositivi}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center md:border-r-2 md:border-gray-600 text-center rounded-l p-6 sm:border-0">
+      <div>
+        <div class="font-serif">
+          <h2 class="text-xl">Totale Casi</h2>
+          <h3 class="text-6xl font-bold">{{casiTotali}}</h3>
+          <p class="text-xl font-bold mt-4">Attuali Positivi: {{totalePositivi}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center text-center rounded-l p-6">
+      <div>
+        <div class="font-serif">
+          <h2 class="text-xl">Totale Decessi</h2>
+          <h3 class="text-6xl font-bold">{{deceduti}}</h3>
+          <p class="text-xl font-bold mt-4">Totale Terapia Intesiva: {{terapiaIntensiva}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="flex justify-center mt-12 gap-4">
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+    (click)="inserisciDatiUltimeDueSettimane()">
+    Ultime 2 settimane
+  </button>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+    (click)="inserisciDatiultimi6Mesi()">
+    Ultimi 6 mesi
+  </button>
+  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+    (click)="inserisciDatiLifetime()">
+    Lifetime
+  </button>
+</div>
+
+<div class="mx-auto w-6/12 mt-4">
+  <canvas id="barChart"></canvas>
+</div>
